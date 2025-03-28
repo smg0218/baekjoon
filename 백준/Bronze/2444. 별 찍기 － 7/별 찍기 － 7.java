@@ -7,18 +7,17 @@ public class Main {
         StringTokenizer st = new StringTokenizer(br.readLine());
         int T = Integer.parseInt(st.nextToken());
         int count = T;
+        int star = 1;
 
         for(int i = 1; i <= T; i++) {
             count--;
             for(int j = 0; j < count; j++) {
                 System.out.print(" ");
             }
-            for(int j = 0; j < i; j++) {
+            for(int j = 0; j < star; j++) {
                 System.out.print("*");
             }
-            for(int j = 1; j < i; j++) {
-                System.out.print("*");
-            }
+            star += 2;
             System.out.println();
         }
         for(int i = T; i >= 0; i--) {
@@ -26,11 +25,8 @@ public class Main {
                 if(i == T) continue;
                 System.out.print(" ");
             }
-            for(int j = 0; j < i; j++) {
-                if(i == T) continue;
-                System.out.print("*");
-            }
-            for(int j = 1; j < i; j++) {
+            star -= 2;
+            for(int j = 0; j < star; j++) {
                 if(i == T) continue;
                 System.out.print("*");
             }
