@@ -5,16 +5,19 @@ public class Main {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st = new StringTokenizer(br.readLine());
-        int[] intList = new int[Integer.parseInt(st.nextToken())];
+        int length = Integer.parseInt(st.nextToken());
         st = new StringTokenizer(br.readLine(), " ");
+        int value = Integer.parseInt(st.nextToken());
+        int min = value;
+        int max = value;
 
 
-        for(int i = 0; i < intList.length; i++) {
-            intList[i] = Integer.parseInt(st.nextToken());
+        for(int i = 1; i < length; i++) {
+            value = Integer.parseInt(st.nextToken());
+            if(value < min) min = value;
+            if(value > max) max = value;
         }
 
-        Arrays.sort(intList);
-
-        System.out.println(intList[0] + " " + intList[intList.length - 1]);
+        System.out.println(min + " " + max);
     }
 }
