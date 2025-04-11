@@ -5,8 +5,8 @@ public class Main {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st;
-        double avg = 0.0f;
-        double sum = 0.0f;
+        double avg = 0.0;
+        double sum = 0.0;
 
         for(int i = 0; i < 20; i++) {
             st = new StringTokenizer(br.readLine(), " ");
@@ -46,6 +46,6 @@ public class Main {
             }
         }
 
-        System.out.printf(avg == 0.0 ? String.valueOf(avg) : String.valueOf(avg / sum));
+        System.out.println(avg == 0.0 ? avg : avg / sum);
     }
 }
