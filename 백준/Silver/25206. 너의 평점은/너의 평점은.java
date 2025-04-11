@@ -14,6 +14,8 @@ public class Main {
             st.nextToken();
             float score = Float.parseFloat(st.nextToken());
             String grade = st.nextToken();
+            if(grade.equals("P"))
+                continue;
             switch (grade) {
                 case "A+":
                     avg = (float) (avg + score * 4.5);
