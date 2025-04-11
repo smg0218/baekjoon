@@ -11,7 +11,7 @@ public class Main {
         for(int i = 0; i < 20; i++) {
             st = new StringTokenizer(br.readLine(), " ");
             st.nextToken();
-            float score = Float.parseFloat(st.nextToken());
+            double score = Double.parseDouble(st.nextToken());
             String grade = st.nextToken();
             if(!grade.equals("P")) {
                 sum += score;
